@@ -4,17 +4,16 @@ import com.itexico.model.Part;
 import com.itexico.representation.Representation;
 import com.itexico.services.PartsService;
 import io.dropwizard.testing.junit.ResourceTestRule;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.ClassRule;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
 
+import static junit.framework.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
@@ -24,7 +23,7 @@ import static org.mockito.Mockito.when;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PartsResourceTest {
-    /*private static final String SUCCESS = "Success...";
+    private static final String SUCCESS = "Success...";
     private static final String TEST_PART_NAME = "testPartName";
     private static final String TEST_PART_CODE = "testPartCode";
     private static final String PARTS_ENDPOINT = "/parts";
@@ -33,7 +32,7 @@ public class PartsResourceTest {
 
     @Rule
     public static final ResourceTestRule resources =
-            ResourceTestRule.builder().addResource(new PartsResource()).build();
+            ResourceTestRule.builder().addResource(new PartsResource(partsService)).build();
 
     private final Part part = new Part(1, TEST_PART_NAME, TEST_PART_CODE);
 
@@ -111,5 +110,5 @@ public class PartsResourceTest {
 
     private static class TestDeleteRepresentation extends Representation<String> {
 
-    }*/
+    }
 }

@@ -11,7 +11,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class RepresentationTest {
-    /*private static final ObjectMapper MAPPER = Jackson.newObjectMapper();
+    private static final ObjectMapper MAPPER = Jackson.newObjectMapper();
     private static final String PART_JSON = "fixtures/part.json";
     private static final String TEST_PART_NAME = "testPartName";
     private static final String TEST_PART_CODE = "testPartCode";
@@ -35,5 +35,5 @@ public class RepresentationTest {
                 .isEqualTo(part.getName());
         assertThat(MAPPER.readValue(fixture(PART_JSON), Part.class).getCode())
                 .isEqualTo(part.getCode());
-    }*/
+    }
 }
