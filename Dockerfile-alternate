@@ -1,0 +1,5 @@
+FROM mysql:5.7
+
+COPY script.sql /tmp/
+
+RUN mysql -u root -p adminadmin -e "create database dropwizard_blog" && mysql -u root -p adminadmin dropwizard_blog < /tmp/script.sql
